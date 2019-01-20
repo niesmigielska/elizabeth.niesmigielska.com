@@ -1,5 +1,5 @@
 ---
-title: "Clerks like us"s
+title: "Clerks like us"
 layout: gallery
 flickr_photoset_id: "72157664370978458"
 ---
