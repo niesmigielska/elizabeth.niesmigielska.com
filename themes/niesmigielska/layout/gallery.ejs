@@ -1,0 +1,165 @@
+<%- partial('_partial/head.ejs') %>
+<body id="gallery">
+<div id="flexbox">
+    <div id="flexbox-a">
+        <%- partial('_partial/header.ejs') %>
+    </div>
+    <div id="flexbox-b">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="intro-slide swiper-slide">
+                    <h1><%- page.title %></h1>
+                    <%- page.content %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+
+    .intro-slide p {
+        padding: 10px 0;
+    }
+    @media screen and (max-width: 1060px) {
+        .intro-slide {
+            font-size: 14px;
+            font-weight: 300;
+            padding: 20px;
+        }
+
+        .intro-slide h1 {
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        #flexbox {
+            width: 100%;
+        }
+        #flexbox img{
+            width: 100vw;
+        }
+
+    }
+    @media screen and (min-width: 1060px) {
+        html, body {
+            height: 100%;
+        }
+
+        #flexbox {
+            width: 100%;
+            height: 100vh;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #flexbox-a {
+            flex-grow: 0;
+        }
+
+        #flexbox-b {
+            flex-grow: 1;
+        }
+
+        .swiper-container {
+            flex-shrink: 0;
+            height: calc(100vh - 90px);
+        }
+
+        .swiper-wrapper {
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: visible;
+            overflow-y: hidden;
+        }
+
+        .swiper-slide {
+            margin: 0 1vw;
+        }
+
+        .swiper-slide.intro-slide {
+            background-color: #fafafa;
+            padding: 20px;
+            width: 20vw;
+            flex-shrink: 0;
+            align-self: stretch;
+        }
+
+        .intro-slide {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .intro-slide h1 {
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        .swiper-slide {
+            max-height: calc(100vh - 90px);
+            align-self: center;
+            max-width: 100vw;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            max-height: calc(100vh - 90px);
+            max-width: 100%;
+        }
+    }
+
+</style>
+<%- partial('_partial/foot.ejs') %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script>
+    (function ($) {
+        var getPhotoset = function (photosetId) {
+            var s = "https://api.flickr.com/services/rest/";
+            return $.when($.getJSON(
+                s,
+                {
+                    method: "flickr.photosets.getPhotos",
+                    api_key: "<%- site.data.flickr.api_key %>",
+                    photoset_id: photosetId,
+                    user_id: "<%- site.data.flickr.user_id %>",
+                    format: "json",
+                    nojsoncallback: "1",
+                    extras: "original_format"
+                }
+            )).then(function (data) {
+                return data.photoset.photo.map(function (e) {
+                    return {
+                        id: e.id,
+                        url: "https://farm" + e.farm + ".staticflickr.com/" + e.server + "/" + e.id + "_" + e.secret + "_h.jpg"
+                    };
+                });
+            });
+        }
+
+        getPhotoset("<%- page.flickr_photoset_id %>").then(function (images) {
+            var slides = $("div.swiper-container > div");
+            images.forEach(function (image) {
+                var div = $("<div><img/></div>");
+                div.addClass('swiper-slide');
+                $('img', div).attr('src', image.url);
+                slides.append(div);
+            });
+        });
+
+        $(".swiper-wrapper").mousewheel(function (evt, chg) {
+            if(window.innerWidth>=1060) {
+                this.scrollLeft -= (evt.deltaY * evt.deltaFactor * 2); //need a value to speed up the change
+                evt.preventDefault();
+            }
+        });
+    })(jQuery);
+
+</script>
+</body>
+<%- partial('_partial/foot.ejs') %>

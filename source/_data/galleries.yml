@@ -1,0 +1,32 @@
+galleries:
+  - category: Ślubne
+    url: /slubne
+  - category: Rodzinne
+    url: /ciazowe-rodzinne-narzeczenskie
+  - category: Okolicznościowe
+    url: /okolicznosciowe
+  - category: Podróże
+    subcategories:
+      - name: Japonia
+        url: /tokio
+      - name: Gruzja
+        url: /gruzja
+      - name: Izrael
+        url: /izrael
+  - category: Reportaż
+    subcategories:
+      - name: Urzędnik też człowiek
+        url: /urzednik
+      - name: "Disneyland: fun kontrolowany"
+        url: /disneyland
+      - name: Karnawał w Potosi
+        url: /karnawal-w-potosi
+      - name: Stary człowiek i Woodstock (2017)
+        url: /woodstock2017
+      - name: Stary człowiek i Woodstock (2016)
+        url: /woodstock
+      - name: Czarny poniedziałek
+        url: /czarny-poniedzialek
+      - name: Marsz rowności w Poznaniu
+        url: /marsz-rownosci-poznan
+     

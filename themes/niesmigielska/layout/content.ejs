@@ -1,0 +1,37 @@
+<%- partial('_partial/head.ejs') %>
+
+<body id="content">
+<style>
+    body#content .wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    body#content .wrapped {
+        padding: 10px 10px 3em 10px;
+        font-size: 18px;
+    }
+    body#content .wrapped h1 {
+        font-size: 2em;
+    }
+    body#content .wrapped p {
+        padding-top: 20px;
+        line-height: 1.8em;
+    }
+    body#content .wrapped ul {
+        list-style-position: inside;
+    }
+    body#content .wrapped li {
+        list-style-type: square;
+        padding-left: 1em;
+        line-height: 1.8em;
+    }
+</style>
+<%- partial('_partial/header.ejs') %>
+<div class="wrapper">
+    <div class="wrapped">
+        <%- page.content %>
+    </div>
+</div>
+</body>
+<%- partial('_partial/foot.ejs') %>
