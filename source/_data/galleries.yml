@@ -1,32 +1,30 @@
 galleries:
-  - category: Ślubne
-    url: /slubne
-  - category: Rodzinne
-    url: /ciazowe-rodzinne-narzeczenskie
-  - category: Okolicznościowe
-    url: /okolicznosciowe
-  - category: Podróże
+  - category: Wedding
+    url: /wedding
+  - category: Family
+    url: /family
+  - category: Party & Event
+    url: /party-and-event
+  - category: Travel
     subcategories:
-      - name: Japonia
-        url: /tokio
-      - name: Gruzja
-        url: /gruzja
-      - name: Izrael
-        url: /izrael
-  - category: Reportaż
+      - name: Japan
+        url: /tokyo
+      - name: Georgia
+        url: /georgia
+      - name: Israel
+        url: /israel
+  - category: Reportage
     subcategories:
-      - name: Urzędnik też człowiek
-        url: /urzednik
-      - name: "Disneyland: fun kontrolowany"
+      - name: Clerks like us
+        url: /clerks-like-us
+      - name: "Disneyland: fun under control"
         url: /disneyland
-      - name: Karnawał w Potosi
-        url: /karnawal-w-potosi
-      - name: Stary człowiek i Woodstock (2017)
+      - name: Carnival in Bolivia
+        url: /carnival-in-bolivia
+      - name: "Woodstock: the biggest festival in Europe (2017)"
         url: /woodstock2017
-      - name: Stary człowiek i Woodstock (2016)
+      - name: "Woodstock: the biggest festival in Europe (2016)"
         url: /woodstock
-      - name: Czarny poniedziałek
-        url: /czarny-poniedzialek
-      - name: Marsz rowności w Poznaniu
-        url: /marsz-rownosci-poznan
+      - name: Black Monday against abortion ban
+        url: /black-monday
      

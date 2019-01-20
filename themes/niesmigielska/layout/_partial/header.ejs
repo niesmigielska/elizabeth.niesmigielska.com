@@ -1,8 +1,8 @@
 <div id="header-container">
     <header class="niesmigielska">
         <div class="logo">
-            <h1><a href="<%= config.url %>">elżbieta.<span class="accent">nie</span>śmigielska.com</a></h1>
-            <h2><a href="<%= config.url %>" class="second">fotografia ślubna i rodzinna<span> </span></a></h2>
+            <h1><a href="<%= config.url %>">elizabeth.<span class="accent">nie</span>smigielska.com</a></h1>
+            <h2><a href="<%= config.url %>" class="second">natural photography<span> </span></a></h2>
         </div>
         <div class="menu-slide"><i class="icon-menu"></i></div>
         <script type="text/javascript">
@@ -38,6 +38,7 @@
             });
         </script>
         <ul class="menu">
+            <li><a href="/about-me">About Me</a></li>
             <% for(var i = 0; i < site.data.galleries.galleries.length;i++) {
                 var gallery = site.data.galleries.galleries[i];
             %>
@@ -56,14 +57,12 @@
             <li><a href="<%= gallery.url %>"><%= gallery.category %></a></li>
             <% } %>
             <% } %>
-            <li><a href="/oferta">Oferta</a></li>
-            <li><a href="/omnie">O mnie</a></li>
             <li><a href="http://www.niesmigielska.com/" target="_blank">Blog</a></li>
             <li class="icon-only"><a href="http://facebook.com/niesmigielska.foto" target="_blank"><i class="social-icon-facebook"></i></a>
             </li>
-            <li class="icon-only"><a href="https://www.instagram.com/elzbieta.niesmigielska/" target="_blank"><i
+            <li class="icon-only"><a href="https://www.instagram.com/niesmigielska/" target="_blank"><i
                             class="social-icon-instagram"></i></a></li>
-            <li class="icon-only"><a href="mailto:smigielska.elzbieta@gmail.com" target="_blank"><i class="social-icon-email"></i></a>
+            <li class="icon-only"><a href="mailto:adamska.elizabeth@gmail.com" target="_blank"><i class="social-icon-email"></i></a>
             </li>
         </ul>
     </header>
