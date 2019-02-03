@@ -55,7 +55,10 @@ header.niesmigielska > * {
 
 header.niesmigielska > div.logo {
   font-size: 30px;
-  color: #fff;
+}
+
+header.niesmigielska > div.logo a {
+  color: black;
 }
 
 @media screen and (max-width: 1060px) {
