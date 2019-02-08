@@ -3,7 +3,8 @@ title: Rodzinne
 layout: gallery
 flickr_photoset_id: "72157682712608970"
 ---
-Ale także: narzeczeńskie, ciążowe, noworodkowe. 
+Including maternity, newborn, engagement photography. 
+Also known as my favourite.
 
-
-U mnie nie znajdziecie zdjęć noworodków upozowanych na owczej skórce i obsypanych płatkami róż - ale mogę zaproponować naturalną sesję w domowych warunkach lub wspólnie wybranym plenerze. Stawiam raczej na spontaniczność niż na sztywne pozowanie. Typowa sesja trwa około 2-3 godzin, podczas których dokumentuję Wasze wspólne chwile. 
+Looking for cute photos of newborns sprinkled with rose petals? Wrong address, you probably want Anne Geddes. 
+What I offer is much more emotional and truly yours. Just you and your loved ones in a natural setting of your choice. The result is documentary yet affectionate and tender. You can tell that love really _was_ in the air during the photo session. 
